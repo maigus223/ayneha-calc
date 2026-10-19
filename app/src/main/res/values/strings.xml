@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AYNEHA CALC</string>
+
+    <!-- Glyphes numériques AYNEHA (Zone d'Usage Privé Unicode, plan 16 : U+10FF7C à U+10FF85) -->
+    <string name="digit_0">&#x10FF7C;</string>
+    <string name="digit_1">&#x10FF7D;</string>
+    <string name="digit_2">&#x10FF7E;</string>
+    <string name="digit_3">&#x10FF7F;</string>
+    <string name="digit_4">&#x10FF80;</string>
+    <string name="digit_5">&#x10FF81;</string>
+    <string name="digit_6">&#x10FF82;</string>
+    <string name="digit_7">&#x10FF83;</string>
+    <string name="digit_8">&#x10FF84;</string>
+    <string name="digit_9">&#x10FF85;</string>
+    <!-- Virgule AYNEHA (séparateur décimal, U+10FFDC) -->
+    <string name="ayneha_comma">&#x10FFDC;</string>
+
+    <!-- Écran Confidentialité -->
+    <string name="info_button_desc">Confidentialité</string>
+    <string name="privacy_title">Confidentialité</string>
+    <string name="privacy_version_format">Version %1$s — Dernière mise à jour : %2$s</string>
+    <string name="privacy_last_update">19 septembre 2026</string>
+    <string name="privacy_body">AYNEHA CALC ne collecte, ne stocke et ne transmet aucune donnée personnelle.\n\nAucun compte, aucun serveur : la calculatrice fonctionne entièrement sur votre appareil, sans connexion internet.\n\nAucun calcul, aucun chiffre saisi n\'est enregistré, envoyé ni partagé avec qui que ce soit.\n\nAucune publicité, aucun traceur, aucune bibliothèque d\'analyse tierce.\n\nLogiciel libre : AYNEHA CALC est un logiciel libre, développé par MAIGUS avec l\'aide d\'outils d\'IA (Claude, Anthropic). Il est publié sous licence GPL v3 ou ultérieure : vous pouvez l\'utiliser, l\'étudier, le modifier et le partager. Toute version modifiée distribuée doit rester libre, sous la même licence. Police : SIL Open Font License 1.1. Code source : github.com/maigus223/ayneha-calculator\n\nDéveloppé par MAIGUS : gwokmt2q@duck.com</string>
+</resources>

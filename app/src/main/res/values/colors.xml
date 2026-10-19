@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="calc_bg">#FFFFFFFF</color>
+    <color name="key_black">#FF000000</color>
+    <color name="key_text_on_black">#FFFFFFFF</color>
+    <color name="key_gray">#FFF2F2F2</color>
+    <color name="display_text">#FF000000</color>
+    <color name="ic_launcher_background">#FFFFFFFF</color>
+    <color name="key_blue_dark">#FF0D2B66</color>
+    <color name="key_orange">#FFFF8A00</color>
+</resources>
