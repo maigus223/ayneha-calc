@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.HorizontalScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import java.math.BigDecimal
 import java.math.MathContext
 import java.math.RoundingMode
@@ -23,6 +25,9 @@ class MainActivity : AppCompatActivity() {
     private var resultLabel: String = ""
     private var startFreshNumber: Boolean = true
     private var isError: Boolean = false
+
+    /** Mise à jour depuis ayneha.org : tirer l'écran vers le bas (voir MiseAJourUi.kt). */
+    private lateinit var maj: MiseAJourUi
 
     private lateinit var tvDisplay: TextView
     private lateinit var tvExpression: TextView
@@ -46,6 +51,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Le geste ne commence que dans le haut de l'écran (zone d'affichage), pour ne pas
+        // gêner la frappe sur les touches.
+        maj = MiseAJourUi(
+            this,
+            accent = ContextCompat.getColor(this, R.color.key_orange),
+            fond = ContextCompat.getColor(this, R.color.key_blue_dark),
+            encre = ContextCompat.getColor(this, R.color.white),
+            police = ResourcesCompat.getFont(this, R.font.ayneha_pro),
+            zoneHaute = 0.35f
+        )
 
         tvDisplay = findViewById(R.id.tv_display)
         tvExpression = findViewById(R.id.tv_expression)
@@ -269,5 +285,15 @@ class MainActivity : AppCompatActivity() {
         BigDecimal(this)
     } catch (e: NumberFormatException) {
         null
+    }
+
+    override fun dispatchTouchEvent(ev: android.view.MotionEvent): Boolean {
+        if (::maj.isInitialized) maj.surToucher(ev)
+        return super.dispatchTouchEvent(ev)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (::maj.isInitialized) maj.surReprise()
     }
 }
